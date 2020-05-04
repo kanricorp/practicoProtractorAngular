@@ -5,4 +5,5 @@
     And ingreso en el buscador "testing"
     When clickeo sobre el texto 'testing' del menu
     Then veo la pagina con titulo "Testing"
-    And la url contiene la palabra "testing"
+    And la url contiene la palabra "guide/testing"
+
