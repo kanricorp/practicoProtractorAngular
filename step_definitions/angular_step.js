@@ -27,12 +27,12 @@ When('clickeo sobre el texto {string} del menu', function (string) {
   return angularPage.clickeoSobreLink().click()
 });
 
-Then('veo la pagina con titulo {string}', function (string) {
-  testingPage.validarPagina(string)
+Then('veo la pagina con titulo {string}', async function (string) {
+  var element = await testingPage.validarPagina()
+  expect(element).equal(string)
 });
 
 
 Then('la url contiene la palabra {string}', function (string) {
-// Write code here that turns the phrase above into concrete actions
-return 'pending';
+  return testingPage.validarURL(string)
 });
