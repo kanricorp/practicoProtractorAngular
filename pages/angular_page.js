@@ -7,7 +7,7 @@ var angularPage = function() {
 
     this.clickeoSobreLink = function() {
         browser.wait(EC.visibilityOf($('.search-result-item')),5000);
-        return browser.findElement(by.partialLinkText('Testing'));
+        return element(by.css('[href="guide/testing"]'));
     }
     this.getBtnGo = function() {
         return btnGo = browser.findElement(by.id('gobutton'));
